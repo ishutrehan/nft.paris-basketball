@@ -1,0 +1,63 @@
+<div class="site-content full-height">
+    <div class="left-image container-fluid mx-auto full-height">
+        <div class="card card0 border-0 full-height">
+            <div class="row d-flex full-height">
+                <div class="col-lg-6 full-height">
+                    <div class="card1 pb-5"></div>
+                </div>
+                <div class="col-lg-6 py-3 right-box full-height">
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <div class="card border-0 px-4" style="padding-top: 15px; padding-bottom: 15px;">
+                                <h1 class="mt-2">INSCRIVEZ-VOUS À LA NEWSLETTER</h1>
+                                <div class="row mb-2">
+                                    <div class="form-group col-6">
+                                        <div class="form-floating mb-1">
+                                            <input type="text" [(ngModel)]="userPayload.first_name" class="form-control" class="form-control" placeholder="Ton Prénom" [ngClass]="{'has-error': error.first_name && !userPayload.first_name}">
+                                            <label for="floatingInput">Ton Prénom</label>
+                                        </div>
+                                        <span class="required" *ngIf="error.first_name && !userPayload.first_name"><i class="fa fa-warning"></i> Ce champ est requis.</span>
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <div class="form-floating mb-1">
+                                            <input type="text" [(ngModel)]="userPayload.last_name" class="form-control" placeholder="Nom de famille" class="form-control" [ngClass]="{'has-error': error.last_name && !userPayload.last_name}">
+                                            <label for="floatingInput">Nom de famille</label>
+                                        </div>
+                                        <span class="required" *ngIf="error.last_name && !userPayload.last_name"><i class="fa fa-warning"></i> Ce champ est requis.</span>
+                                    </div>
+                                    <div class="form-group col-12">
+                                        <div class="form-floating mb-1">
+                                            <input type="text" [(ngModel)]="userPayload.email" class="form-control" placeholder="Ton email" [ngClass]="{'has-error': error.email && !userPayload.email}">
+                                            <label for="floatingInput">Ton email</label>
+                                        </div>
+                                        <span class="required" *ngIf="error.email && !userPayload.email"><i class="fa fa-warning"></i> Le champ email est obligatoire.</span>
+                                        <span class="required" *ngIf="error.invalidemail"><i class="fa fa-warning"></i> S'il vous plaît, mettez une adresse email valide</span>
+                                    </div>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input type="checkbox" [(ngModel)]="userPayload.receive_news" class="form-check-input" id="check1" name="option1"
+                                        value="something" checked>
+                                    <label class="form-check-label" for="check1" style="text-align: left;"> &nbsp;Je veux recevoir la newsletter.</label>
+                                </div>
+                                <button class="louer un-bien mt-3" (click)="subscribe()"> M'abonner <i class="fa fa-spinner fa-spin"
+                                    *ngIf="loader"></i> 
+                                </button>
+                                <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert" *ngIf="errormessage">
+                                    {{ errormessage }}
+                                    <button type="button" class="btn-close" (click)="closeError()"></button>
+                                </div> 
+                                <div class="alert alert-success alert-dismissible mt-3" *ngIf="successmessage">
+                                    {{ successmessage }}
+                                    <button type="button" class="btn-close" (click)="closeSuccess()"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

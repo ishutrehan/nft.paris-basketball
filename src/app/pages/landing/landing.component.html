@@ -1,0 +1,107 @@
+<div class="container-fluid full-height">
+
+    <div class="ombre-interne full-height">
+            <div id="carouselExampleCaptions" class="carousel slide full-height" data-bs-ride="carousel">
+                <div class="carousel-inner full-height">
+                    <div class="carousel-item active full-height">
+                        <img src="../../../assets/images/image-1.png" class="full-height d-block w-100 peinture-ombre-interne-fine" alt="...">
+                        <div class="carousel-caption">
+                        <div class="logo">
+                        <img src="../../../assets/images/logo.png">
+                        </div>
+                        <h4>We Are</h4>
+                            <h5 class="coming-soon mt-5">coming <b class="soon">soon</b>
+                            </h5>
+                            <h1 style="text-align: center;" class="mt-5">Paris Basketball NFT</h1>
+                            <div class="subscribe">
+                                <button class="rejoindre" (click)="subscriberPopup()">rejoindre la liste d'attente</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item full-height">
+                        <img src="../../../assets/images/image-2.png" class="full-height d-block w-100 peinture-ombre-interne-fine" alt="...">
+                        <div class="carousel-caption">
+                        <div class="logo">
+                        <img src="../../../assets/images/logo.png">
+                        </div>
+                        <h4>We Are</h4>
+                            <h5 class="coming-soon mt-5">coming <b class="soon">soon</b>
+                            </h5>
+                            <h1 style="text-align: center;" class="mt-5">Paris Basketball NFT</h1>
+                            <div class="subscribe">
+                                <button class="rejoindre" (click)="subscriberPopup()">rejoindre la liste d'attente</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item full-height">
+                        <img src="../../../assets/images/image-4.png" class="full-height d-block w-100 peinture-ombre-interne-fine" alt="...">
+                        <div class="carousel-caption">
+                        <div class="logo">
+                        <img src="../../../assets/images/logo.png">
+                        </div>
+                        <h4>We Are</h4>
+                            <h5 class="coming-soon mt-5">coming <b class="soon">soon</b>
+                            </h5>
+                            <h1 style="text-align: center;" class="mt-5">Paris Basketball NFT</h1>
+                            <div class="subscribe">
+                                <button class="rejoindre" (click)="subscriberPopup()">rejoindre la liste d'attente</button>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="carousel-item full-height">
+                        <img src="../../../assets/images/image-5.png" class="full-height d-block w-100 peinture-ombre-interne-fine" alt="...">
+                        <div class="carousel-caption">
+                        <div class="logo">
+                        <img src="../../../assets/images/logo.png">
+                        </div>
+                        <h4>We Are</h4>
+                            <h5 class="coming-soon mt-5">coming <b class="soon">soon</b>
+                            </h5>
+                            <h1 style="text-align: center;" class="mt-5">Paris Basketball NFT</h1>
+                            <div class="subscribe">
+                                <button class="rejoindre" (click)="subscriberPopup()">rejoindre la liste d'attente</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            
+    </div>
+    <!-- ombre-interne -->
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Abonnez-vous à notre newsletter</h5>
+                <button type="button" class="close" (click)="closepopup()">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-1">
+                    <label>Entrez votre adresse email</label>
+                    <input type="email" class="form-control mt-3" [(ngModel)]="userPayload.email">
+                    <button class="btn btn-info btn-md mt-4 subscribe-button" (click)="subscribe()">S'abonner <i class="fa fa-spinner fa-spin" *ngIf="loader"></i></button>
+                    <div class="alert alert-danger alert-dismissible mt-3" role="alert" *ngIf="errormessage">
+                        {{ errormessage }}
+                        <button type="button" class="btn-close" (click)="closeerrormessage()"></button>
+                    </div>
+                    <div class="alert alert-success alert-dismissible mt-3" *ngIf="successmessage">
+                        {{ successmessage }}
+                        <button type="button" class="btn-close" (click)="closesuccessmessage()"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

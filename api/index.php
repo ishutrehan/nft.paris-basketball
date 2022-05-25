@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>test</h1>
+
+<?php 
+//phpinfo();
+?>
+</body>
+</html>

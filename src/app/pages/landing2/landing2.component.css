@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'Koulen';
+    src: url('../../../assets/fonts/Koulen-Regular.ttf');
+}
+html{
+    height: 100%;
+}
+.full-height{
+    height: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.right-box{
+    overflow-y: scroll;
+}
+::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #EEEEEE;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-family: 'Acme', sans-serif;
+}
+
+
+a {
+    color: #000
+}
+
+
+.card1 {
+    background-image: url(../../../assets/images/image-1.png);
+    height: 100%;
+    color: #fff;
+    background-position: center;
+    background-size: cover;
+}
+.form-label{
+    text-align: left;
+    margin-top: 20px;
+    
+}
+
+.card2 {
+    text-align: left;
+}
+
+.logo {
+    margin-top: 30px;
+    margin-left: 15px;
+    cursor: pointer
+}
+
+
+
+.line {
+    height: 1px;
+    width: 45%;
+    background-color: #E0E0E0;
+    margin-top: 10px
+}
+
+
+.or {
+    width: 10%
+}
+
+.text-sm {
+    font-size: 14px !important
+}
+
+.card-0 {
+    color: #000000;
+    background-color: #fff;
+    min-height: 352px;
+    margin-top: 80px;
+    padding: 30px
+}
+
+
+.sort-radio input:checked~.checkmark {
+    background-color: #e85d18;
+}
+.content {
+    color: #000;
+    font-size: 14px
+}
+
+.social {
+    margin-top: 150px
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+.box {
+    width: 100%;
+    padding: 100px 0px;
+}
+
+h1 {
+    font-size: 68px;
+    line-height: 1;
+    margin-bottom: 0 !important;
+}
+
+button.louer.un-bien {
+    background: #000000;
+    padding: 195px;
+    padding: 18px 88px 18px 90px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6{
+    
+    font-family: "Koulen" !important;
+    font-weight: 500;
+    color: #000 !important;
+}
+.form-control{
+    border-radius: 0;
+    border-bottom: 2px solid #000000;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    color: black;
+}
+.form-floating label{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.form-control:focus{
+    box-shadow: none!important;
+}
+.form-check-input:checked {
+    background-color: #000000;
+    border-color: #000000;
+}
+.form-check-input{
+    width: 1.3em;
+    height: 1.3em;
+    border-radius: 0 !important;
+}
+.form-check-input:focus, input:focus{
+    box-shadow: none !important;
+}
+input[type=checkbox]:checked + .form-check-label{
+    color: #000;
+    font-weight: 500;
+}
