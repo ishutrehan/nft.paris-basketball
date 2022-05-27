@@ -12,9 +12,8 @@ export class LoginComponent implements OnInit {
   successmessage: any;
   errormessage: any;
   loader: any;
-
   constructor(public api: ApiProvider) { }
-
+ 
   ngOnInit(): void {
     if(this.api.getStorage('isLogin')){
       window.location.href = '';
@@ -41,6 +40,8 @@ login() {
         this.errormessage = result.message;
       }else{
         localStorage.setItem("isLogin", 'true');
+        localStorage.setItem("userdata",JSON.stringify(result.user));
+
         window.location.href='';
         //this.successmessage = "Vous avez été abonné avec succès.";
         this.userPayload = {

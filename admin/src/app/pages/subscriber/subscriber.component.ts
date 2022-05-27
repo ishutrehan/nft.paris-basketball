@@ -14,11 +14,14 @@ baseUrl: any;
 persons: any;
 dtOptions:any = {};
 dtTrigger: Subject<any> = new Subject<any>();
+
   constructor(public http: HttpClient, public api: ApiProvider) { }
 
   ngOnInit(): void {
+    if(!this.api.getStorage('isLogin')){
+      window.location.href = '/login';
+    }
       this.subscriber();
-
   }
   
   subscriber(){
@@ -28,9 +31,5 @@ dtTrigger: Subject<any> = new Subject<any>();
       }, err => {
         //console.log("err", err);
       })
-
-    
   }
-
-
 }

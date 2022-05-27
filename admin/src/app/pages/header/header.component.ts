@@ -7,9 +7,13 @@ import { ApiProvider } from '../../../providers/utilities/utility';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor(public api: ApiProvider) { }
-
+  userdata:any ={};
+  constructor(public api: ApiProvider) { 
+   if(this.api.getStorage('userdata')) {
+     var userdata: any = this.api.getStorage('userdata')   
+     this.userdata = JSON.parse(userdata) ;
+   }
+  }
   ngOnInit(): void {
   }
     islogin(){

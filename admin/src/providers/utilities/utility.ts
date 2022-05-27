@@ -23,6 +23,15 @@ export class ApiProvider {
       });
     });
   }
+  users(payload: any) {
+    return new Promise((resolve, reject) => {
+      this.http.post(this.baseUrl + '/getuser.php', payload).subscribe(data => {
+        resolve(data);
+      }, (err: any) => {
+        reject(err);
+      });
+    });
+  }
   login(payload: any) {
     return new Promise((resolve, reject) => {
       this.http.post(this.baseUrl + '/login.php', payload).subscribe(data => {

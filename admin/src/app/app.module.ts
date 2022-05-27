@@ -15,6 +15,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SubscriberComponent } from './pages/subscriber/subscriber.component';
 import {DataTablesModule} from 'angular-datatables';
+import { UsersComponent } from './pages/users/users.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {DataTablesModule} from 'angular-datatables';
     FooterComponent,
     DashboardComponent,
     LoginComponent,
-    SubscriberComponent
+    SubscriberComponent,
+    UsersComponent
     
   ],
   imports: [
